@@ -11,7 +11,7 @@ public class Main {
         playlist.agregarCancion("My eyes", "Travis Scott", "Trap", 200);
         playlist.agregarCancion("Summit", "Skrillex", "Electronica", 210);
         playlist.agregarCancion("Burn", "Ty Dolla $ing", "Hip hop", 190);
-        playlist.agregarCancion("Praise God", "Kanye West", "Hip Hip", 220);
+        playlist.agregarCancion("Praise God2", "Kanye West", "Hip Hip", 220);
         playlist.agregarCancion("La combi Versace", "Rosalia", "Urbano", 230);
         playlist.agregarCancion("Get Lucky", "Daft Punk", "Electronica", 170);
         playlist.agregarCancion("Runaway", "Kanye West", "Rap", 250);
