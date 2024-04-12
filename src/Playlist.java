@@ -1,4 +1,6 @@
 import java.util.Random;
+import java.io.FileWriter;
+import java.io.IOException;
 
 class Playlist {
     Nodo cabeza;
@@ -29,6 +31,20 @@ class Playlist {
         while (temp != null) {
             System.out.println("Nombre: " + temp.nombre + ", Artista: " + temp.artista + ", Género: " + temp.genero + ", Duración: " + temp.duracion + " segundos");
             temp = temp.siguiente;
+        }
+    }
+    public void exportarPlaylist(String nombreArchivo) {
+        try (FileWriter writer = new FileWriter(nombreArchivo)) {
+            Nodo temp = cabeza;
+            while (temp != null) {
+                // Escribir los detalles de la canción en el archivo
+                writer.write(temp.nombre + "," + temp.artista + "," + temp.genero + "," + temp.duracion + "\n");
+                temp = temp.siguiente;
+            }
+            System.out.println("La playlist ha sido exportada exitosamente al archivo: " + nombreArchivo);
+        } catch (IOException e) {
+            System.out.println("Error al exportar la playlist al archivo: " + nombreArchivo);
+            e.printStackTrace();
         }
     }
     public int obtenerLongitud() {
