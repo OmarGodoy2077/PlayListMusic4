@@ -1,3 +1,5 @@
+import java.util.Random;
+
 class Playlist {
     Nodo cabeza;
 
@@ -29,6 +31,42 @@ class Playlist {
             temp = temp.siguiente;
         }
     }
+    public int obtenerLongitud() {
+        int longitud = 0;
+        Nodo temp = cabeza;
+        while (temp != null) {
+            longitud++;
+            temp = temp.siguiente;
+        }
+        return longitud;
+    }
+
+    // Constructor y otros métodos...
+
+        public void reproducirCancionAleatoria() {
+            // Verificar si la playlist está vacía
+            if (cabeza == null) {
+                System.out.println("La playlist está vacía.");
+                return;
+            }
+
+            // Generar un índice aleatorio dentro del rango de la longitud de la lista
+            Random rand = new Random();
+            int index = rand.nextInt(obtenerLongitud());
+
+            // Recorrer la lista hasta alcanzar el índice aleatorio
+            Nodo temp = cabeza;
+            for (int i = 0; i < index; i++) {
+                temp = temp.siguiente;
+            }
+
+            // Mostrar los datos de la canción en el nodo actual
+            System.out.println("Reproduciendo canción aleatoria:");
+            System.out.println("Nombre: " + temp.nombre);
+            System.out.println("Artista: " + temp.artista);
+            System.out.println("Género: " + temp.genero);
+            System.out.println("Duración: " + temp.duracion + " segundos");
+        }
 
 
     public void eliminarCancion(String nombre) {
@@ -128,4 +166,6 @@ class Playlist {
         System.out.println("Duración total de la playlist: " + minutos + " minutos y " + segundos + " segundos");
     }
 }
+
+
 // Path: src/Nodo.java

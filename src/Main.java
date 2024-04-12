@@ -26,6 +26,7 @@ public class Main {
             System.out.println("4. Buscar canción por nombre");
             System.out.println("5. Ordenar playlist por nombre");
             System.out.println("6. Calcular duración total de la playlist");
+            System.out.println("7. Reproducir canción aleatoria");
             System.out.println("0. Salir");
             System.out.print("Ingrese su opción: ");
             opcion = scanner.nextInt();
@@ -65,6 +66,12 @@ public class Main {
                 case 6:
                     playlist.calcularDuracionTotal();
                     break;
+                case 7:
+                    playlist.reproducirCancionAleatoria();
+
+
+                    break;
+
                 case 0:
                     System.out.println("Saliendo  del programa...");
                     break;
