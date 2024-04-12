@@ -6,7 +6,7 @@ class Playlist {
         this.cabeza = null;
     }
 
-    // Método para agregar una canción al final de la playlist
+
     public void agregarCancion(String nombre, String artista, String genero, int duracion) {
         Nodo nuevaCancion = new Nodo(nombre, artista, genero, duracion);
         if (cabeza == null) {
@@ -20,7 +20,7 @@ class Playlist {
         }
     }
 
-    // Método para imprimir la playlist completa
+
     public void imprimirPlaylist() {
         Nodo temp = cabeza;
         System.out.println("Playlist:");
@@ -30,7 +30,7 @@ class Playlist {
         }
     }
 
-    // Método para eliminar una canción por su nombre
+
     public void eliminarCancion(String nombre) {
         Nodo temp = cabeza;
         if (temp.nombre.equals(nombre)) {
@@ -47,8 +47,7 @@ class Playlist {
         }
     }
 
-    // Método para insertar una nueva canción en una posición específica
-    // Método para insertar una nueva canción en una posición específica
+
     public void insertarCancion(String nombre, String artista, String genero, int duracion, int posicion) {
         Nodo nuevaCancion = new Nodo(nombre, artista, genero, duracion);
         if (posicion == 0) {
@@ -66,12 +65,12 @@ class Playlist {
                 temp.siguiente = nuevaCancion;
             }
         }
-        // Ordenar la playlist por nombre después de insertar la nueva canción
+
         ordenarPorNombre();
     }
 
 
-    // Método para buscar una canción por su nombre
+
     public void buscarCancion(String nombre) {
         Nodo temp = cabeza;
         while (temp != null) {
@@ -116,7 +115,7 @@ class Playlist {
         }
     }
 
-    // Método para calcular la duración total de la playlist
+
     public void calcularDuracionTotal() {
         int duracionTotal = 0;
         Nodo temp = cabeza;

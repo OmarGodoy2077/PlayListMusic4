@@ -6,7 +6,7 @@ class Nodo {
 
     Nodo siguiente;
 
-    // Constructor
+
     public Nodo(String nombre, String artista, String genero, int duracion) {
         this.nombre = nombre;
         this.artista = artista;
