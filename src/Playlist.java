@@ -5,7 +5,7 @@ import java.io.IOException;
 class Playlist {
     Nodo cabeza;
 
-    // Constructor
+
     public Playlist() {
         this.cabeza = null;
     }
@@ -37,7 +37,7 @@ class Playlist {
         try (FileWriter writer = new FileWriter(nombreArchivo)) {
             Nodo temp = cabeza;
             while (temp != null) {
-                // Escribir los detalles de la canción en el archivo
+
                 writer.write(temp.nombre + "," + temp.artista + "," + temp.genero + "," + temp.duracion + "\n");
                 temp = temp.siguiente;
             }
@@ -59,23 +59,23 @@ class Playlist {
 
 
         public void reproducirCancionAleatoria() {
-            // Verificar si la playlist está vacía
+
             if (cabeza == null) {
                 System.out.println("La playlist está vacía.");
                 return;
             }
 
-            // Generar un índice aleatorio dentro del rango de la longitud de la lista
+
             Random rand = new Random();
             int index = rand.nextInt(obtenerLongitud());
 
-            // Recorrer la lista hasta alcanzar el índice aleatorio
+
             Nodo temp = cabeza;
             for (int i = 0; i < index; i++) {
                 temp = temp.siguiente;
             }
 
-            // Mostrar los datos de la canción en el nodo actual
+
             System.out.println("Reproduciendo canción aleatoria:");
             System.out.println("Nombre: " + temp.nombre);
             System.out.println("Artista: " + temp.artista);
