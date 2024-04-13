@@ -57,7 +57,6 @@ class Playlist {
         return longitud;
     }
 
-    // Constructor y otros métodos...
 
         public void reproducirCancionAleatoria() {
             // Verificar si la playlist está vacía
@@ -137,7 +136,7 @@ class Playlist {
         System.out.println("La canción '" + nombre + "' no se encuentra en la playlist.");
     }
 
-    // Método para ordenar la playlist por nombre de canción
+
     public void ordenarPorNombre() {
         Nodo actual = cabeza, siguiente;
         String tempNombre, tempArtista, tempGenero;

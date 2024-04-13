@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Playlist playlist = new Playlist();
 
-        // Agregar canciones a la playlist
+
         playlist.agregarCancion("Candy", "Rosalia", "Pop", 180);
         playlist.agregarCancion("No more Parties in LA", "Kanye West", "Rap", 240);
         playlist.agregarCancion("My eyes", "Travis Scott", "Trap", 200);
